@@ -13,6 +13,10 @@ import com.lms.LaptopManagementSystem.services.LaptopActions;
 @Service
 public class LaptopServiceImpl implements LaptopActions{
 	
+	
+	@Autowired
+	private EmailService emailService;
+	
 	@Autowired 
 	private LaptopRepository laptopRepository;
 	
@@ -59,6 +63,8 @@ public class LaptopServiceImpl implements LaptopActions{
 			Laptop existingLaptopDetails = laptopObjFromDb.get();
 			existingLaptopDetails.setLaptopPrice(newLaptopValue.getLaptopPrice());
 			laptopRepository.save(existingLaptopDetails);
+			//emailService.sendEmail("newLaptopValue.getEmailId()", "check", "New details are updated...!!!!"+newLaptopValue.getLaptopPrice());
+			emailService.sendEmail("RECIVER'S EMAIL ADDRESS", "check", "New details are updated...!!!!" + newLaptopValue.getLaptopPrice());
 		}
 	}
 	

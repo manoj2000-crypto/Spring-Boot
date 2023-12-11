@@ -8,6 +8,7 @@ public interface LaptopActions {
 	
 	Laptop addLaptopDetails(Laptop laptopObj);
 	List<Laptop> readAllDetailsFromDB();
-
+	//ADD BELOW METHOD ALSO THEN OVERRIDE IT.
+	//updateLaptopDetails
 }
  

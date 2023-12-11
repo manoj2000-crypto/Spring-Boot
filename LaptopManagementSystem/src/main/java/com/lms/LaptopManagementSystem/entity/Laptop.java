@@ -32,7 +32,6 @@ public class Laptop {
 	public Laptop(String laptopName, Float laptopPrice, Long laptopSerialNumber,
 			Boolean laptopWarrantyStatus) {
 		super();
-		//this.laptopId = laptopId;
 		this.laptopName = laptopName;
 		this.laptopPrice = laptopPrice;
 		this.laptopSerialNumber = laptopSerialNumber;

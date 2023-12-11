@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lms.LaptopManagementSystem.entity.Laptop;
 import com.lms.LaptopManagementSystem.serviceImpl.LaptopServiceImpl;
 
-@RestController //Modified after break.
+@RestController 
 @RequestMapping("/laptopmanagementsystem.com")
 public class LaptopController {
 	
