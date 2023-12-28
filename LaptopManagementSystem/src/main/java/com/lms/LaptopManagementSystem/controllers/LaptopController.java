@@ -3,6 +3,7 @@ package com.lms.LaptopManagementSystem.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,8 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lms.LaptopManagementSystem.entity.Laptop;
 import com.lms.LaptopManagementSystem.serviceImpl.LaptopServiceImpl;
 
+//@CrossOrigin(origins = "*", allowedHeaders="*")
 @RestController 
-@RequestMapping("/laptopmanagementsystem.com")
+@CrossOrigin(origins="http://localhost:4200")//Angular server port
+@RequestMapping("/laptopmanagementsystem.com")//Just a domain name.
 public class LaptopController {
 	
 	@Autowired
@@ -52,7 +55,7 @@ public class LaptopController {
 	}
 	
 	@DeleteMapping("/deleteLaptop/{laptopId}")
-	void deleteLaptop(@PathVariable("id") int deleteLaptopId) 
+	void deleteLaptop(@PathVariable("laptopId") int deleteLaptopId) 
 	{
 		laptopServiceImpl.deleteLaptopById(deleteLaptopId);
 	}

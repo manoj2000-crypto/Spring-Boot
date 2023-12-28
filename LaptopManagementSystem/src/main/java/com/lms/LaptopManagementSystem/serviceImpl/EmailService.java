@@ -19,7 +19,7 @@ public class EmailService {
 		mailMessage.setTo(toEmail);
 		mailMessage.setSubject(subject);
 		mailMessage.setText(message);
-		mailMessage.setFrom("officialmanojkale2020@gmail.com");
+		mailMessage.setFrom("SENDER'S EMAIL ADDRESS");
 		//bcc, cc 
 		javaMailSender.send(mailMessage);
 

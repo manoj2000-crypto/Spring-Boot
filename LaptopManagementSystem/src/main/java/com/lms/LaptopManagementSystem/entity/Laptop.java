@@ -24,10 +24,7 @@ public class Laptop {
 	private Long laptopSerialNumber;
 	private Boolean laptopWarrantyStatus;
 
-	public Laptop() 
-	{
-		
-	}
+	public Laptop() { }
 	
 	public Laptop(String laptopName, Float laptopPrice, Long laptopSerialNumber,
 			Boolean laptopWarrantyStatus) {
